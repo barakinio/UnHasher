@@ -24,7 +24,7 @@ def main():
     # If the hashes are equal, we will print the correct password and break from the loop.
     # If the hases are not equal, we will print and continue to the next attempt.
     for pswd in wordlist:
-        print (password, end =" ")
+        print (pswd, end =" ")
         pswdhash = hashlib.md5(pswd.encode('utf-8')).hexdigest()
         print (PASCOR) if pswdhash == args.v else print (PASBAD)
 
